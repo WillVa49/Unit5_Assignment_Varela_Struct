@@ -147,7 +147,7 @@ void acceptOrder(vector<MenuItem> &m)
   cout << "Tips:      $" << tip << endl;
   cout << "Tax:       $" << tax << endl;
   cout << "Total      $" << total << endl;
-
+  //Payment type
   cout << "\n\nDo you want to pay with cash or credit? (1 for cash || 2 for credit) " << endl;
   cin >> payment;
   if (payment == 1)
