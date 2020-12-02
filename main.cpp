@@ -154,8 +154,6 @@ void acceptOrder(vector<MenuItem> &m)
   {
     cout << "You picked card. Press 1 to swipe it." << endl;
     cin >> payment;
-    do
-    {
       if (payment == 1)
       {
         cout << "Processed complete. Thank you and have a nice day." << endl;
@@ -164,7 +162,6 @@ void acceptOrder(vector<MenuItem> &m)
       {
         cout << "Error, please try again." << endl;
       }
-    }while (payment == 1 && payment == 1);
   }
   else 
     {
