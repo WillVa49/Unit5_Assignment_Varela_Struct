@@ -57,15 +57,20 @@ void populateMenu(vector<MenuItem> &entireMenu)
 
 void showMenu(vector<MenuItem> &m)
 {
+  string color = "";
+  string color1 = "";
+  string reset = "\x1b[0m"; //adding color
+  color = "\x1b[32;1m";
+  color1 = "\x1b[36;1m";
   cout << fixed << setprecision(2);//set doubles to 2 decimal places
-  cout << "DrT's Effcient Menu" << endl; 
-  cout << "ADD  \tNAME \t COST \tREMOVE\tCOUNT\tDESC"<<endl; 
+  cout << color << "DrT's Effcient Menu" << reset << endl; 
+  cout << color << "ADD  \tNAME \t COST \tREMOVE\tCOUNT\tDESC"<< reset << endl; 
   for(int i = 0; i < m.size(); i++)
   {
-    cout << m[i].addLetter << ")" << setw(10) << m[i].name 
+    cout << color1 << m[i].addLetter << ")" << setw(10) << m[i].name 
     << setw(5) << "$" << m[i].itemCost << setw(5) << "(" << m[i].removeLetter
     << ")" << setw(7) << m[i].count << setw(13) << m[i].desc 
-    <<endl; 
+    << reset << endl; 
   }
 
 }
@@ -79,6 +84,7 @@ void acceptOrder(vector<MenuItem> &m)
   double tax = 0.0;
   int payment = 0;
   double cash = 0.0;
+
   do
   {
     cout << "\nPlease choose an item (x to Exit): ";
